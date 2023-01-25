@@ -1,0 +1,262 @@
+<!-- html curriculum vitae
+con barra de navegacion css y js responsiva
+Leer por favor el Readme.
+
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curriculum Vitae</title>
+        <link rel="stylesheet" href="css\estilos.css"> <!-- estilos de la pagina -->
+        <link rel="stylesheet" href="css\modal_estilo.css"> <!-- estilo de la ventana emergente-->
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <!-- fuentes externas -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <!-- recurro al kit que me
+           enviarion de fontawesome para referenciar un 
+          icono para el menu en otros dispositivos y redes sociales-->
+        <script
+          src="https://kit.fontawesome.com/7cfbca42e3.js"
+          crossorigin="anonymous"
+        ></script>
+        <script defer src="js\funciones.js"></script> <!-- ejecucion diferida del script -->
+        <script defer src="js\modal_scripts.js"></script><!-- control de la ventana contacto -->
+    </head>
+<body>
+
+<!-- generacion de la ventana de contacto modal -->
+<div id="modal_container" class="modal-container">
+      
+  <div class="modal">
+      <section>
+          <div> 
+            <div>
+                  <!-- formulario de contacto -->
+                  <form id="form" action="" class="form"> 
+                    <h1 class="tag"><span>Contacto</span></h1>
+                    <label for="name">Nombre Completo: <span></span></label>
+                    <input name="name" type="text" id="name" placeholder="Nombre">
+                    <br>
+                    <label for="email">Correo electrónico: <span></span></label>
+                    <input name="email" type="text" id="correo" placeholder="correo">
+                    <br>
+                    <label for="message">Mensaje</label>
+                    <br>
+                    <textarea class="msg-conten" id="message" name="message"></textarea>
+                    <br>
+                    <button id="close" type="submit" class="boton">enviar mensaje</button>
+                  </form>
+              <!-- link que oculto en la hoja de estilo para utilizarlo en la funcion de envio -->
+              <a class="destinatario" href="mailto:gmarinoc@email.com" id="enviar"></a>
+            </div>
+            <button id="cerrar" class="botonclose">cerrar</button> <!-- boton de cierre de toda la ventana -->
+          </div>
+      </section>
+  </div>
+
+</div>
+<!-- pagina principal del html-->
+    <header class="header">
+        <!-- definicion de la barra del menu -->
+        <barra class="barra">   
+                  <a href="index.html" class="Name barra-link">GMC</a>
+                  <span>
+                          <img class="foto" src="img/foto.png" alt="imagen de perfil">
+                  </span>
+                  <!-- definicion del boton del icono de acceso al menu responsivo-->
+                  <button class="barra-toggle" aria-label="Abrir menú"> <!-- definicion de una etiqueta que permita definir su accesibilidad-->
+                          <!-- <i class="fas fa-bars"></i>  selecciono el icono para el menu responsivo -->
+                          <i class="fa-solid fa-bars"></i>
+                  </button>
+                  <!-- definicion de los items del menu -->
+                  <ul class="barra-menu">
+                          <li id="item1" class="barra-menu-item">
+                            <a href="#ancla1" class="barra-menu-link barra-link">Sobre mí</a>
+                          </li>
+                          <li id="item2" class="barra-menu-item">
+                            <a href="#ancla2" class="barra-menu-link barra-link">Experiencia</a>
+                          </li>
+                          <li id="item3" class="barra-menu-item">
+                            <a href="#ancla3" class="barra-menu-link barra-link">Educación</a>
+                          </li>
+                          <li id="item4" class="barra-menu-item">
+                              <a href="#ancla4" class="barra-menu-link barra-link">Conocimientos</a>
+                            </li>
+                          <li id="open" class="barra-menu-item">
+                            <a href="#ancla5" class="barra-menu-link barra-link">Contacto</a>
+                          </li>
+                  </ul>
+        </barra>
+        <p class="linea"></p>
+      </header>
+  <main>
+  <!-- sector redes sociales -->
+  <div class="grid-container">
+        <div class="conten-header">
+          <h2 id="ancla1">German Marino Costa</h2>
+          <div id="ancla2" class="direccion">Av.Campos 1325 - Ciudad de Buenos Aires - CP1758 - (011) 4526-2587 - gmarinoc@email.com
+          </div>
+          <div class="redes-sociales">  <!-- iconos redes sociales sin definir links solo para whatsapp-->
+                <p>	<br></p>
+                <a class="Social-icons" href="#"> 
+                      <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a class="Social-icons" href="#"> 
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a class="Social-icons" href="#"> 
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a class="Social-icons" href="#"> 
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a class="Social-icons" href="#"> 
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a class="Social-icons" href="https://wa.me/541145262587" target="_blank" rel="noopener noreferrer"> 
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+          </div>
+  </div>
+  <!-- sector izquierdo con la foto de perfil-->
+  <div class="left">
+      <img src="Img/perfil.jpg" alt="" height="144" width="144"/>
+  </div>
+  <div class="right"></div> <!-- sector derecho vacio -->
+  <!-- sector central principal -->
+  <div class="middle">
+            <p class="about"> Amplio expertise en el desarrollo de equipos y entornos de trabajo colaborativos. <br/>
+            Los enfoques iterativos de la estrategia corporativa fomentan el pensamiento constructivo para promover
+             la iniciativa de valor general.<br/>
+             Pragmatico en la operación basado en analisis pormenorizados de cada situacion.
+            <br/>
+            <br/>
+            <br/></p>
+            <hr>
+            <div>
+              <section class="seccion-conten">
+                  <h1 class="conten-titulo">
+                      <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;">Experiencia</font></font>
+                      <br/>
+                  </h1>
+                  <h3>Gerente de proyectos</h3>
+                  <h4>NUTRILACT S.A.</h4>
+                  <H4>Planeamiento y dirección de proyectos de tecnología relacionados con la gestión. 
+                    Gerenciamiento de proyectos especiales, conducción de equipos de diseño y desarrollo. 
+                    Auditor operativo. Asesor de dirección.
+                    <br/>
+                    <br/>
+                  </H4>
+                  <h4 style="color: rgb(11, 98, 104); text-align: center;">
+                   Enero 2013 - Presente
+                  </H4>
+                 
+                  <h3>Auditor Operativo</h3>
+                  <h4>LALA S.A.</h4>
+                  <H4>Diseño de modelos de gestion, relevamiento operativo. Coordinacion de equipos, analista de métodos.
+                     Asesor de dirección.
+                     <br/>
+                     <br/>
+                  </H4>
+                  <h4 style="color: rgb(11, 98, 104); text-align: center;">
+                    Enero 2011 - Diciembre 2013
+                   </H4>
+                 
+                  <h3>Director Administrativo</h3>
+                  <h4>PHONE PRODUCTS COMPANY S.R.L.</h4>
+                  <H4>Gerenciamiento de gestión. Coordinacion de equipos, auditoria administrativa, gestión de recursos humanos. 
+                    Planeamiento estratégico corporativo.
+                    <br/>
+                    <br/>
+                   </H4>
+                   <h4 style="color: rgb(11, 98, 104); text-align: center;">
+                    Enero 2009 - Diciembre 2010
+                    <br/>
+                    <br/>
+                   </H4>
+              </section>
+              <hr> <!-- division de seccion en el contenido -->
+            </div>
+            <div>
+                <section id="ancla3" class="seccion-conten">
+                    <h1 class="conten-titulo">
+                        <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Educación</font></font>
+                    </h1>
+                    <h3>Universidad de Buenos Aires</h3>
+                    <h2>Lic. Administración de Empresas
+                      <br/>
+                    </h2>
+                    <H4>Gestión Administrativa.
+                        Promedio general 9.3<br/>
+                        Graduado: Diciembre 2013
+                        <br/>
+                        <br/>
+                    </H4>
+                   
+                    <h3>Colegio Secundario Nacional</h3>
+                    <h2>Perito Mercantil
+                      <br/>
+                    </h2>
+                    <H4>Orientación contable general.
+                        Graduado: Promedio general 8.9<br/>
+                        Graduado 1996
+                        <br/>
+                        <br/>
+                    </H4>               
+                </section>
+                <hr> <!-- division de seccion en el contenido -->
+              </div>
+              <div>
+                <section id="ancla4" class="seccion-conten">
+                    <h1 class="conten-titulo">
+                        <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Conocimientos</font></font>
+                    </h1>
+                    <h3>Flujo de Trabajo
+                      <br/>
+                    </h3>
+                    <ul>
+                        <li>Conducción de equipos</li>
+                        <li>Formación de elementos</li>
+                        <li>Gestión optima de tiempos</li>
+                        <li>Planificación eficiente</li>
+                        <li>Fijación de objetivos</li>
+                        <li>Pragmatismo táctico</li>
+                        <li>Conocimientos tecnico-legales</li>
+
+                    </ul>
+                    <h3>Herramientas
+                      <br/>
+                    </h3>
+                    <ul>
+                        <li>Software ERP</li>
+                        <li>Gestores de proyectos</li>
+                        <li>Suits de oficina</li>
+                        <li>Software de diseño</li>
+                        <li>Software CRM</li>
+                        <li>Plataformas y software de marketing</li>
+                        <li>Software Recursos Humanos</li>
+                        <br/>
+                        <br/>
+
+                    </ul>
+                </section>
+                <hr> <!-- division de seccion en el contenido -->
+              </div>
+        </div> 
+        <!-- pie de pagina -->
+        <div class="footer">
+        <p>Proyecto coacheado por profesores de Ticmas Academy - Enero 2023 - Argentina Programa</p>
+        </div>
+    </div>
+  </main>
+</body>
+</html>

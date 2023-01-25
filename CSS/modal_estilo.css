@@ -1,0 +1,104 @@
+
+/* ESTILOS PARA LA VENTANA EMERGENTE DE CONTACTO Y EL FORMULARIO DE ENVIO */
+
+/** link a la fuente de google */
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:#fdfdfd;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.boton {
+  background-color: #47a386;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.botonclose {
+  margin-top: 10px;
+  background-color: #aa481b;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+  cursor: pointer;
+
+}
+
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;  
+  top: 0;
+  left: 0;
+  height: 110vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+/** clase para aparecer u ocultar la ventana - utilizada en la funcion*/
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color:#2d8999;
+  width: 450px;
+  max-width: 100%;
+  padding: 0px 0px 10px 0px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h1,label {
+  margin: 0;
+  color:white;
+}
+/** definicion de estilo de elementos dentro de una clase*/
+.modal p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+.destinatario {
+    opacity: 0;
+}
+.msg-conten {
+    resize:none;
+    width:300px;
+    height:200px;
+}
+
+/* configuracion para dispositivos pequeños del formulario de contacto */
+@media (max-width: 576px) {
+  /** tamaño del contenedor del mensaje */
+.msg-conten {
+    width:200px;
+    height:200px;
+}
+/** barra de scroll cuando el menu no cabe en pantalla */
+.modal {
+  overflow-y: auto;
+}
+
+}    

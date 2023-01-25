@@ -1,0 +1,295 @@
+/** estilos globales de la pagina*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  /** estilos del body*/
+  body {
+    margin-top: 20px;
+    font-family: sans-serif;
+    padding: 90px 20px 0; /** defino el contenido debajo del header*/
+  }
+  /** estilos del encabezado */
+  .header {
+    background-color: #2d8999;
+    height: 80px;
+    position: fixed; /** fija la barra para el scroll*/
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  /** estilos de la barra*/
+  .barra {
+    display: flex;
+    justify-content: space-between;
+            /** centro los items de acuerdo a breakpoint large*/
+    max-width: 992px;
+    margin: 0 auto;
+    /*box-shadow: 2px 2px 5px #999;*/
+  }
+/** estilo de la foto de perfil*/
+.foto {
+    padding-top: 15px;
+    padding-right: 0px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    border-color: black;
+ }
+  /** estilo de los links*/
+  .barra-link {
+    color: white;
+    text-decoration: none;
+  }
+  /** estilos del nombre*/
+  .Name {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px; /** tamaño de la linea igual al encabezado*/
+    width: max-content;
+  }
+  /** estilos de los items de la barra*/
+  .barra-menu {
+    display: flex; /** distribuyo horizontalmente*/
+    margin-right: 40px;
+    list-style: none;
+  }
+  /** estilos para los links del menu*/
+  .barra-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content; /** evito que los items de mas de una palabra se corten*/
+  }
+  
+  .barra-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+  /** estilos del link con el mouse hover*/
+  .barra-menu-link:hover,
+  .barra-menu-link_active {
+    background-color: #64dddd;
+    color:black;
+    transition: 0.9s;
+  }
+  
+  /* estilo del boton o icono de acceso al menu responsivo*/
+  .barra-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px; /* defino linea mas pequeña porque la barra se achicara */
+    cursor: pointer;
+    /* lo oculto inicialmente ya que se define solo para otros dispositivos */
+    display: none;
+  }
+  /* redes sociales*/
+  .redes-sociales {
+    font-size: 50px;
+    /*text-shadow: 2px 2px 5px #999;*/
+  }
+
+  .Social-icons {
+    text-decoration:none;
+    color:#bebfc0;
+  }
+  .Social-icons:hover {
+    cursor:pointer;
+    background: none;
+    color: #2d8999;
+  }
+
+  /* ESTILOS DEL CONTENIDO*/
+
+  .conten-titulo {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .seccion-conten {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+  }
+
+  .conten-header {
+    grid-area: header;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  .direccion {
+    font-size:medium;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+  
+  /* grilla contenedora de la pagina principal */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left middle middle middle middle right' 
+      'footer footer footer footer footer footer';
+        grid-column-gap: 10px; /*- espacios entre columnas de la grilla */
+  } 
+  .about {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: justify;
+  }
+  /* estilo de las columnas */
+  .left {
+    grid-area: left;
+    padding: auto;
+    background: linear-gradient(#2d8999, rgb(255, 255, 255));
+    text-align: center;
+  }
+  .middle {
+    background-color: #ffffff;
+  }
+  .right {
+    padding: 10px;
+    background: linear-gradient(#2d8999, rgb(255, 255, 255));
+    text-align:justify ;
+  }
+
+  /** defino una "linea" sobreada a modo de shadow de la barra de menu
+   no supe como hacer para "estilizar" el modo en que el cuerpo principal se "mete" debajo de la barra
+   seguro hay una mejor forma que todavia no se como hacer*/
+  .linea {
+    background: linear-gradient(#bebfc0, rgb(255, 255, 255));
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    position: fixed;
+  }
+    
+  /* relaciono el nombre de la columna con el area definida */
+  .middle {
+    grid-area: middle;
+  }
+  
+    .right {
+    grid-area: right;
+    background-color: #2d8999
+    
+  }
+  
+  /* estilo del pie de pagina */
+  .footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+
+
+
+  
+  /* definiciones de estilos para dispositivos que no son de escritorio:  mobiles
+  a partir de tabletas o large (breackpoint), sobreescribiendo los estilos necesarios definidos
+  anteriormente */
+  @media (max-width: 992px) {
+    body {
+      padding-top: 90px;
+    }
+    /** reformateo la grilla*/
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        /*'right right right right right right' */
+        'footer footer footer footer footer footer';
+    }
+    /** aajusto el encabezado haciendolo mas delgado*/
+    .header {
+          height: 60px;
+    }
+
+    /** quito la linea shadow inferior de la barra de menu que cree antes*/
+    .linea {
+      visibility: hidden;
+    }
+  
+    .Name {
+      font-size: 25px;
+      padding: 0 20px;
+      line-height: 60px;
+    }
+  /** encolumno el menu y lo centro a toda la pantalla del movil*/
+    .barra-menu {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background-color: #2c3e50;
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      padding: 20px 0;
+        /** ajusto los items para que tomen toda la pantalla y si fuera muy pequeña un scroll derecho*/
+      height: calc(100% - 56px);
+      overflow-y: auto;
+  
+      left: 100%;
+      transition: left 0.5s; /** transicion del menu de derecha a izquierda*/
+    }
+  
+    .barra-menu-item {
+      line-height: 60px;
+    }
+  /** ajusto los items seleccionados para mouse y seleccion*/
+    .barra-menu-link:hover {
+      background: none;
+      color: #2d8999;
+    }
+   
+    /** muestro el icono del menu*/
+    .barra-toggle {
+      display: block;
+    }
+  
+    .barra-menu_visible {
+      left: 0;
+    }
+
+    .barra-menu_invisible {
+        left: 100%;
+    }
+    .left {
+      grid-area: left;
+      background: linear-gradient(#ffffff, rgb(255, 255, 255));
+      text-align: center;
+    }
+    .right {
+      padding: 0px;
+      background-color: #ffffff;
+      text-align:justify ;
+    }
+  /** quito el resaltado cuando estoy navegando con el mouse y no con el tab */
+    .barra-toggle:focus:not(:focus-visible) {
+      outline: none;
+    }
+  } 
+/** achico los iconos de redes sociales para dispositivos pequeños*/
+  @media (max-width: 576px) {
+    .redes-sociales {
+      font-size: 30px;
+    }
+
+  }
+  
