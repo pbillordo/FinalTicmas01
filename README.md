@@ -25,4 +25,10 @@ Claro que el código es fruto de todo eso, por lo que seguramente hay mucho que 
 y aun hay cosas que no he descubierto como hacer, hacerlo mejor o correctamente. Es seguro que a pesar de lo impartido por el 
 profesor cometí errores básicos que no he detectado y deberé corregir en esta etapa o las posteriores.
 
+Fe de errores:
+El ultimo commit realizado fue debido que al implementar la pagina hosteada aqui, el html contenia referencias a recursos en 
+carpetas con minusculas cuando en la estructura estan en mayusculas (problema que no tenia localmente), por lo que la correccion
+se trato de solamente del tipo href: RECURSO/xxxxx.*. Seguramente existen otros que deberan ser evaluados pero crei válida 
+la aclaración.
+
 Muchas Gracias
